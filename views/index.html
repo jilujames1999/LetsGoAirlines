@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Let's Go Airlines</title>
+        <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        body {
+    margin: 0;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+}
+
+header * {
+    display: inline;
+    height: 50px;
+}
+
+header ul {
+    padding: 0;
+}
+
+header li {
+    margin-left: 20px;
+}
+
+*
+{
+  box-sizing: border-box;
+}
+
+
+section {
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    background-size: cover; /* Add this line */
+    background-position: center center; /* Add this line */
+    background-repeat: no-repeat; /* Add this line */
+    background-attachment: fixed; /* Add this line */
+}
+
+.booking-form-box {
+			max-width: 350px;
+			border: 1px solid #ced4da;
+			margin: 10% auto 0;
+		}
+
+		.radio-btn
+		{
+			margin: 0 20px;
+		}
+		.radio-btn .btn
+		{
+			margin: 20px 10px 20px 0;
+			box-shadow: none;
+		}
+
+		.radio-btn .btn::after
+		{
+			content: '';
+			height: 15px;
+			width: 15px;
+			top: -2px;
+			left: -1px;
+			background-color: #fff;
+			position: relative;
+			display: inline-block;
+			border: 3px solid #fff;
+			visibility: visible;
+			border-radius: 50%;
+		}
+
+
+		.radio-btn .btn:checked::after
+		{
+			content: '';
+			background-color: #000;
+			transition: 0.5s;
+		}
+
+		.radio-btn span
+		{
+			color: #fff;
+			margin-right: 5px;
+			font-size: 12px;
+		}
+
+		.booking-form
+		{
+			padding: 0 20px 20px;
+		}
+
+		.booking-form label
+		{
+			margin-bottom: 5px;
+			margin-top: 10px;
+			font-size: 12px;
+			color: black;
+		}
+
+		input::placeholder
+		{
+			color: #fff !important;
+		}
+
+		.input-grp
+		{
+			width: 151px;
+			display: inline-block;
+		}
+
+		.form-control
+		{
+			font-size: 12px !important;
+			border-radius: 0 !important;
+			color: #fff !important;
+			background: transparent !important;
+			box-shadow: none !important;
+		}
+
+		.select-date::-webkit-inner-spin-button,
+		.select-date::-webkit-outer-spin-button
+
+		{
+			-webkit-appearance: none;
+			margin: 0;
+		}
+		.select-date::-webkit-calender-picker-indicator
+		{
+			background: transparent !important;
+		}
+		.custom-select
+		{
+			color: #fff !important;
+			font-size: 12px !important;
+			border: 1px solid #ced4da !important;
+			box-shadow: none !important;
+			border-radius: 0 !important;
+			background: transparent !important;
+
+		}
+
+		.custom-select option
+		{
+			color: #333;
+
+		}
+
+		.flight
+		{
+			width: 100%;
+			padding: 9px 0 !important;
+			font-size: 12px !important;
+			border: 1px solid #ced4da !important;
+			background: transparent !important;
+			box-shadow: none !important;
+			border-radius: 0 !important;
+		}
+
+		.flight:hover
+		{
+			background: #fff !important;
+			color: #000 !important;
+			transition: 0.5s;
+		}
+
+#hero .profile-img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+}
+
+section h2 {
+    font-size: 1.5em;
+}
+
+section h3 {
+    font-size: 1.5em;
+}
+
+section h4 {
+    font-size: 1.5em;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Add everything below here */
+
+#hero {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://i.pinimg.com/originals/34/53/2c/34532c2b99204247999b80d876f21644.jpg');
+}
+
+#about {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F6103edbe0fd54e1b40616035%2F0x0.jpg');
+}
+
+#contact {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://s3-eu-west-1.amazonaws.com/eflanguagesblog/wp-content/uploads/2019/01/23235809/Travel-makes-you-a-better-person.jpg');
+}
+
+    </style>
+    <body>
+        <header>
+            <img src="logo.jpg" class="profile-img">
+            <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Overview">Overview</a></li>
+                    <li><a href="#Vision">Vision</a></li>
+                    <li><a href="#Values">Values</a></li>
+                
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="hero">
+                <div class="section-inner">
+                    <a name="Home"> </a>
+                    <img src="image.jpg" class="profile-img">
+                    <h1>Welcome to Let's Go Airlines!</h1>
+                </div>
+                <div class="booking-form-box">
+                    
+                    <div class="booking-form">
+                    <label>Source</label>
+                    <select id="source" class="form-control">
+                        <option value="">Select</option>
+                        <% for(var i=0; i<city.length; i++) { %>
+                            <option style="color: #000 !important;" value="<%= city[i] %>"><%= city[i] %></option>
+                        <% } %>
+                    </select>
+
+                    <label>Destination</label>
+                    <select id="destination" class="form-control">
+                        <option value="">Select</option>
+                        <% for(var i=0; i<city.length; i++) { %>
+                            <option style="color: #000 !important;" value="<%= city[i] %>"><%= city[i] %></option>
+                        <% } %>
+                    </select>
+        
+                
+                    <div class="input-grp">
+                    <label>Departing</label>
+                    <input type="date" id="dateofdeparture"  class="form-control select-date">
+                    </div>
+            
+                
+                    <div class="input-grp">
+                        <label>Passengers</label>
+                        <input type="number" id="numberof" class="form-control" value="1" min="1" max="3">
+                    </div>
+                
+                
+    
+                
+                    <div class="input-grp">
+                        <button type="button" class="btn btn-primary flight">Show Flights</button>
+                        <a href="flight_search.html"></a>
+                    </div>
+                
+                
+                    </div>
+            </div>
+                
+                
+            </section>
+            <section id="about">
+                <div class="section-inner">
+                    <a name="Overview">
+                    <h2>Overview</h2>
+                    <p>Let’s Go Airlines is the project name for a new airline company that will focus on single
+                        class long-haul scheduled flights. Let’s Go Airlines will capitalise on the widening gap in
+                        long-haul travel between business and economy class. Let’s Go Airlines will operate
+                        Boeing 757-200 aircraft configured with 80 seats which will provide a very spacious and
+                        pleasant environment. The aircraft will be equipped with the latest technology in order to
+                        enable the business traveller to use his time efficiently while travelling. The company will
+                        start by leasing two aircraft and expand its fleet to 6 aircraft by the second year of
+                        operation.
+                        Let’s Go will be a "business to business" airline and will focus exclusively on the
+                        premium/business segment of the market. It will offer customers a compelling value
+                        proposition: a high level of service and comfort at 50 percent of the current published
+                        business-class fare. In addition to an attractive price, Let’s Go will offer passengers
+                        considerable time savings, convenience, and will focus on creating a lifestyle appeal.
+                    </p>
+                    </a>
+                    <a name="Vision">
+                    <h3>Vision</h3>
+                    <p>
+                        Let's Go aims to establish itself as a niche player in the long-haul market of business
+                        travel. By continuously focusing on the needs of the premium class business traveller,
+                        Let’s Go will provide the best value proposition in the markets it serves.
+                    </p>
+                    </a>
+                    <a name="Values">
+                    <h4>Values
+                    </h4>
+                    <p>
+                        We exist to provide a valuable service to our customers, a rewarding opportunity for our
+                        employees, and profitability to our shareholders. We believe that success in this
+                        endeavor depends on our employees. Satisfied employees lead to satisfied customers,
+                        which lead to satisfied shareholders. To achieve this, we enable our employees to act
+                        with an entrepreneurial spirit, and we value those willing to take responsibility for their
+                        actions and the consequences of those actions. We treat employees as family, which
+                        fosters intimacy, informality, strong relationships, caring attitudes, and it makes work
+                        more fun. We want our customers to experience legendary service that makes a lasting
+                        impression. Providing exceptional value to customers requires hard work and
+                        concentration. We believe in doing things right the first time. We take pride in our efforts
+                        as well as the rewards. Throughout this endeavor, safety will be the overriding force
+                        behind any decision.
+                    </p>
+                    </a>
+                </div>
+            </section>
+            
+            <section id="contact">
+                <div class="section-inner">
+                    <h2>Contact us</h2>
+                    <p>Please find us on:</p>
+                    <ul>
+                        <li><a href="https://twitter.com/makemytrip/">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/makemytrip/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/makemytrip/?hl=en">Instagram</a></li>
+                    </ul>
+                    <p>For further query,<a href="mailto:b2bflighthelpdesk@makemeytrip.com"> send us an email</a>.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            © Copyright Let's Go Airlines, 2021
+        </footer>
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var source =  '';
+        var destination =  '';
+        var dateofjourney =  '';
+        var numberof =  '';
+        
+        $(function(){
+            var dtToday = new Date();
+            
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if(month < 10)
+                month = '0' + month.toString();
+            if(day < 10)
+                day = '0' + day.toString();
+            
+            var maxDate = year + '-' + month + '-' + day;
+            $('#date_of_journey').attr('min', maxDate);
+        });
+    })
+</script>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Flights</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/public/favicon.png">
+</head>
+<body>
+  <div class="row">
+      <% for(var i=0; i<flights.length; i++) { %>
+        <div class="col-sm-6 col-lg-4 col-xl-3">
+        <img src="image.jpg" style="width:300px;height:300px;">
+              <h1>Flight ID : <%= flights[i].Flight_ID %></h1>
+              <p><%= flights[i].Source %> to <%= flights[i].Destination %></p>
+              <p>Departure: <%= flights[i].Departure_time %> - Arrival: <%= flights[i].Arrival_time %></p>
+              <p>Seats Available: <%= flights[i].Seat_Availability %></p>
+              <p>Price: <%= Number(flights[i].Ticket_Price)*Number(flights[i].numberofpassengers) %></p>
+              <div class="justify-content-center">
+                <a class="btn btn-primary success" href="/views/passenger_details.html">Book Now</a>
+            </div>
+
+          
+        
+        </div>
+    <% } %>
+  </div>
+  <% if(flights.length==0){ %>
+    <div class="container">
+    <div class="row w-100 ml-0 justify-content-center mt-4"><h1 style="text-align: center;">No flights available</h1></div>
+    <div class="row w-100 ml-0 justify-content-center mt-3"><a href="/" class="btn btn-primary btn-small">Go To Home</a></div>
+    </div>
+    <% } %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src='index.js'> </script>
+    
+
+</html>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style type="text/css">
+
+.input-grp{
+  font-size: large;
+  font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+  width: 500px;
+  display: inline-block;
+} 
+</style>
